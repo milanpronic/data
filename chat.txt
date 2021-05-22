@@ -1,0 +1,201 @@
+Hello
+A
+Where are you located and what hours are you available typically?
+Hi!
+Nice to meet you .
+I'm from serbia.
+I'm available on 8.00am - 8.00p.m
+For now, here is 9.00ap
+A
+9am?
+yeah
+sorry
+ok, are you able to work a little now?
+I can send you the project / task details we want consultation on. Then in turn, you can review it and propose how much time to complete your proposal / suggestion.
+A
+how does that sound?
+yeah.
+ok are you able to reply and get the proposed time back to me in the next hour or two?
+ok here is our challenge
+A
+
+Task: We want to bulk load our elasticsearch cluster:
+> SNS topic
+> Kinesis Firehose
+> Maybe event bridge
+
+1.) We will need to transform the message before loaded into elasticsearch
+2.) We have over 30 million records we want fast bulk load FIFO.
+3.) We want to publish a bulk amound to the SNS topic, but we dont not want multiple copies of the same records sent.
+4.) We want to predict how long to complete all 30 million records
+5.) We also want to keep using the process for regular updating of elastic search.
+I'm just receive.
+Ah, I will check it now.
+A
+ok great i will be here waiting
+thanks.
+Hi, there?
+A
+hello
+would you explain more detail what are you going to do with these 3 services?
+If you can provide me work flow for you system, it's better for me
+it is already explained.
+your are the professional so we are expecting you to know
+the best approach
+A
+database > sns ? > elasticsearch cluster
+I got only you want to do something with over 30 million records
+A
+the best way to bulk load data from database to elastic search cluster
+Ahh, just a moment
+so how's about the sns topic?
+A
+what about it?
+would you show or send me your database?
+no all records, only 10~100 records
+i dont have access to it, but i know it is aurora the message is very small
+A
+each record maybe 8 fields in json
+you means database is SNS aurora?
+we need to make sure once a record is published it will stay on the queue until ingested or put in error queue
+A
+yes 30 million rows in aurora database
+when we load the bulk records in to elastic beanstalk, elastic search engine will make index for all records.
+but there are several way to configure it..
+of course it's not problem to load them into elastic beanstalk
+elasticsearch not beanstalk
+or wait..
+A
+so you are saying use beanstalk then load into elastic search
+yeah
+how is it loaded into beanstalk
+A
+SNS?
+elastic beanstalk is elastic search engine that provided on AWS.
+ok so hmm.. are you saying that we could essentially bind elastic beanstalk web environment to the aurora database
+A
+and elastic search will query it?
+sure
+A
+hmm im not finding any documentation that suggests this. it seems elastic beanstalk is used for hosting and deploying webs.
+I mean... no direct query for elastic beanstalk.
+via web interdace
+i dont understand what your are proposing. Can you explainly very clearly how your propose to get data from aurora to being searchable by elastic search?
+A
+I will pay you for your time. 1 hour and we can discuss details here
+1 hours is not important
+I think it's important understanding your requirements
+ok its simple. Forget what I already mentioned.
+1.) We need to ingest 30 millions of rows of data - into elastic search cluster.
+A
+so if you know a better way, let me know.
+there is no problem for this
+and then?
+2.) We need to know step by step how to do it.
+A
+3.) We want it to be fast, FIFO, and when all data is loaded - we want elasticsearch cluster to mirror the database
+what means FIFO?
+first in first out? or ???
+A
+yes
+about the mirroring, need to add one configuration when add records to elastic search engine
+not so complex
+ok this is after the bulk loading correct?
+the search engine will connect directly to the aurora database?
+A
+or trigger the dataloading process
+no connect toaurora database.
+just copy to elastic search engine.
+and if you need to add more data to aurora database, we have to add them to elastic search engine too
+A
+ok can you explain the bulk loading of elastic search? we need to transform the data before ingesting
+you mean bulk adding to elastic search engine?
+A
+how do we get all the data into elastic search?
+get all data?
+wow
+it's not good
+A
+all 30 million rows
+why need to load all data from elastic engine?
+A
+no from RDS database > into elastic search
+ahh
+from rds to elastic search?
+yes thats what ive said many times
+A
+RDS is Aurora same thing
+slightly smiling face emoji
+load all records from rds.
+add all records with bulk command at one time to elastic search?
+you want to see some code block to load it?
+smile emoji
+no not sure.. we are trying to decide
+A
+you have code sample to bulk load 30 million rows?
+if you want, I can build the code block
+A
+it is able to compare rds to elastic search and add if not exist
+of course can do it like that
+hmm..
+ok so we do the bulk load with this code you mention.
+then after, there will be maintenance process using SNS to keep RDS in Synk with Elastic search
+we will publish to SNS when a record is added or updated
+we never delete
+A
+ok, yes, I want to see this code block. Can you explain what it is doing? And if it can transform data? Is it transactional / ACID?
+I have to build the code block from now
+would you pay for this work?
+Yes, but I need to know what the code block will do. I am not clear about it
+A
+Can you clearly explain exactly what it will do?
+I'll create new demo table,and then,
+A
+what technology will be used?
+How is it transactional?
+How will we be sure no records are duplicated?
+How fast is it?
+About Technology , I'll use express.
+there is never duplicated.
+becasue,
+*because
+*because
+After build demo table,
+ok how long before you have something I can see
+A
+and we can agree on 2 hours for this task? So we can chat in 2.5 hours or when you have something.
+it'll take 5 hours.
+ok so i will have it from you in about 6-7 hours
+and before that, I need a light document of the detail so I can start on my UML Presentation
+A
+I am a senior developer so I understand a lot I just need to high level explanation so I can illustrate it to my manager
+Congratulations, your bid has been awarded!
+Click the Accept button below to start working.
+This is an hourly project with a rate of $38.00 USD per hour. Accepting is free.
+Accept
+A
+awaiting your reply
+I never see the milestone.
+Julius K. created a milestone
+Milestone: 'Create code for using express to bulk load Aurora database table into elastic search cluster.'
+Amount: $ 190.00 USD
+perfect
+I'll start right now.
+great! lets begin with you sending me the high level explanation of what this process is.
+
+If you can send me a document of the workflow using the relevant AWS icons that would be good.
+
+Or you can send bullet points of the workflow from Step 1 > to Step XX
+A
+and also: I need to proposal for the maintenance of the database. Is that SNS > elastic search?
+yeah
+A
+ok so here is everything in order:
+1.) High Level explanation/document for illustration of workflow (30 mins)?
+2) Code Block for bulk loading all Aurora data into elastic search cluster (4 hours)
+3.) Document explaining the workflow to maintain the Elasticsearch database after the bulk load.
+
+Can you confirm this.
+J
+Confirm
+I confirm
